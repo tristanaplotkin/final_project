@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="topAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.healthcare.HealthcareController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane fx:id="dataAnchor" prefHeight="100.0" prefWidth="600.0" visible="false" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <TableView fx:id="dataTableView" prefHeight="259.0" prefWidth="600.0" visible="false" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="First Name" />
+                  <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Last Name" />
+                <TableColumn fx:id="bdColumn" prefWidth="75.0" text="Birth Date" />
+                  <TableColumn fx:id="genderColumn" prefWidth="75.0" text="Gender" />
+                  <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="Description" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="passwordAnchor" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <PasswordField fx:id="passwordField" alignment="BOTTOM_CENTER" layoutX="214.0" layoutY="200.0" prefHeight="31.0" prefWidth="173.0" promptText="Enter Password" AnchorPane.bottomAnchor="169.33333333333331" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="213.33333333333337" AnchorPane.topAnchor="200.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="enterButton" layoutX="275.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#checkPassword" text="ENTER" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
